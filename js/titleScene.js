@@ -4,11 +4,11 @@
 //
 // Created by: dom
 // Created on: Sep 2020
-// This is Splash Scene
+// This is title Scene
 
-class SplashScene extends Phaser.Scene {
+class TitleScene extends Phaser.Scene {
   constructor () {
-    super({ key: 'splashScene' })
+    super({ key: 'titleScene' })
   }
 
   init (data) {
@@ -16,16 +16,15 @@ class SplashScene extends Phaser.Scene {
   }
 
   preload () {
-    console.log('Splash Scene')
+    console.log('Title Scene')
   }
 
   ceate (data) {
   }
 
   update (time, delta) {
-    this.scene.switch('titleScene')
   }
   }
 
-  export default SplashScene
+  export default TitleScene
   
