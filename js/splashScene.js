@@ -2,7 +2,7 @@
 
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
-// Created by: Jakub Malhotra
+// Created by: Dominik Armatys
 // Created on: April 2023
 // This is the splash scene
 
