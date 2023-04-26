@@ -1,58 +1,48 @@
-/* global Phaser*/
+/* global Phaser */
 
-// Copyright (c) 2023 Domnik All rights reserved
-//
+// Copyright (c) 2023 Dominik All rights reserved //
+
 // Created by: Dominik Armatys
 // Created on: April 2023
-// This is the Splash Scene
+// This is the Phaser 3 game configuration file
+
+// scene import statements
+import SplashScene from "./splashScene.js"
+import TitleScene from "./titleScene.js"
+
+// create the new scenes
+const splashScene = new SplashScene()
+const titleScene = new TitleScene()
 
 /** 
-* This class is the Splash Scene.
+* Start Phaser Game.
 */
-class SplashScene extends Phaser. Scene {
-  /**
-  * This method is the construtor.
-  */
-  constructor() {
-    super({ key: "splashScene" })
-  }
-
-  /**
-  * Can be defined on your own Scenes.
-  * This method is called by the Scene Manager when the scene starts,
-  * before preload() and create().
-  * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
-  */
-  init(data) {
-    this.cameras.main.setBackgroundColor("ffffff")
-  }
-
-  /**
-    * Can be defined on your own Scenes.
-    * Use it to load assets.
-    */
-  preload() {
-    console.log("Splash Scene")
-  }
-
-  /**
-  * Can be defined on your own Scenes.
-  * Use it to create your game objects.
-  * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
-  */
-  create(data) {
-  // pass
-  } 
-
-  /**
-    * Should be overridden by your own Scenes.
-    * This method is called once per game step while the scene is running. 
-    * @param {number} time The current time.
-    * @param {number} delta - The delta time in ms since the last frame.
-    */
-  update(time, delta) {
-    this.scene.switch("titleScene")
-  }
+const config = { 
+  type: Phaser.AUTO, 
+  width: 1920,
+  height: 1080,
+  physics: {
+    default: "arcade",
+    arcade: {
+      debug: true,
+    },
+  },
+  // set background color
+  backgroundColor: 0x5f6e7a,
+  scale: {
+    mode: Phaser. Scale.FIT,
+  // we place it in the middle of the page,
+    autoCenter: Phaser. Scale.CENTER_BOTH,
+  },
 }
 
-export default SplashScene
+const game = new Phaser. Game (config) 
+//console.log(game)
+
+// load scenes
+// Note: remember any "key" is global and CAN NOT be reused! 
+game.scene.add("splashScene", splashScene) 
+game.scene.add("titleScene", titleScene)
+
+// the start scene
+game.scene.start("splashScene")

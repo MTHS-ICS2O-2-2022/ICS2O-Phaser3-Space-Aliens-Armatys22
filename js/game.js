@@ -1,6 +1,6 @@
 /* global Phaser */
 
-// Copyright (c) 2023 Dominik All rights reserved //
+// Copyright (c) 2023 Dominiks All rights reserved //
 
 // Created by: Dominik Armatys
 // Created on: April 2023
