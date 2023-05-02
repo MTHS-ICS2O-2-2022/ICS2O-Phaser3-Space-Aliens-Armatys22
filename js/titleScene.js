@@ -60,6 +60,9 @@ this.titleSceneTextStyle = { font: '200px Times', fill: '#fde4b9', align: 'cente
     * @param {number} delta - The delta time in ms since the last frame.
     */
   update(time, delta) {
+    if (time > 6000) {
+      this.scene.switch('menuScene')
+    }
     // pass
   }
 }
