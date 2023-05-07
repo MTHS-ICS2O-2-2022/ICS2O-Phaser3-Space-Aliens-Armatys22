@@ -2,7 +2,7 @@
 
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
-// Created by: Dominik Armatys
+// Created by: Jakub Malhotra
 // Created on: April 2023
 // This is the splash scene
 
@@ -54,7 +54,7 @@ class SplashScene extends Phaser.Scene {
   }
 
   /**
-   * Should be overidden by your own Scenes.
+   * Should be overridden by your own Scenes.
    * This method is called once per game step while the scene is active.
    * @param {number} time - The current time.
    * @param {number} delta - The delta time in ms since the last frame.
