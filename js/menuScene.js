@@ -1,17 +1,17 @@
-/* global Phaser */
+/* global Phaser*/
 
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2023 Dominik All rights reserved
 //
-// Created by: Dom
-// Created on: May 2023
-// This is the Menu scene
+// Created by: Dominik
+// Created on: April 2023
+// This is the Menu Scene
 
 /**
  * This class is the Menu Scene.
  */
 class MenuScene extends Phaser.Scene {
   /**
-   * This method is the constructor.
+   * This method is the construtor.
    */
   constructor() {
     super({ key: "menuScene" })
@@ -21,17 +21,17 @@ class MenuScene extends Phaser.Scene {
   }
 
   /**
-   * Can be defined on your own scenes.
-   * This method is called by the scene manager when the scene is started,
-   *  before preload() and create ().
-   * @param {object} data - Any data passed via ScenePlugin.add(). or ScenePlugin.start().
+   * Can be defined on your own Scenes.
+   * This method is called by the Scene Manager when the scene starts,
+   *before preload() and create().
+   * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   init(data) {
     this.cameras.main.setBackgroundColor("ffffff")
   }
 
   /**
-   * Can be defined on your own scenes.
+   * Can be defined on your own Scenes.
    * Use it to load assets.
    */
   preload() {
@@ -41,9 +41,9 @@ class MenuScene extends Phaser.Scene {
   }
 
   /**
-   * Can be defined on your own scenes.
-   * Use it to create game objects.
-   * @param {object} data - Any data passed via ScenePlugin.add(). or ScenePlugin.start().
+   * Can be defined on your own Scenes.
+   * Use it to create your game objects.
+   * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   create(data) {
     this.menuSceneBackgroundImage = this.add.sprite(0, 0, "menuSceneBackground")
@@ -57,12 +57,12 @@ class MenuScene extends Phaser.Scene {
 
   /**
    * Should be overridden by your own Scenes.
-   * This method is called once per game step while the scene is active.
+   *This method is called once per game step while the scene is running.
    * @param {number} time - The current time.
    * @param {number} delta - The delta time in ms since the last frame.
    */
   update(time, delta) {
-    //pass
+    // pass
   }
 
   clickButton() {
